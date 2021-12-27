@@ -3,6 +3,7 @@
   width: 100px;
   color: aqua;
   display: inline-block;
+  border: 2px solid;
 }
 h1 {
   color: red;

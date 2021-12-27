@@ -9,8 +9,8 @@ def play():
 
 
 @app.route('/play')
-def starter_boxes():
-    return render_template('boxes.html', box=3)
+def starter_boxes(color):
+    return render_template('boxes.html', box=3, color='blue')
 
 
 @app.route('/play/<int:num>')

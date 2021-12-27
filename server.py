@@ -18,7 +18,7 @@ def many_boxes(num):
     return render_template('boxes.html', box=num)
 
 
-@app.route('/play/<int:num>/color')
+@app.route('/play/<int:num>/<string:color>')
 def colorful(num, color):
     return render_template('boxes.html', box=num, color=color)
 

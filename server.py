@@ -14,7 +14,12 @@ def starter_boxes():
 
 
 @app.route('/play/<int:num>')
-def one_box(num):
+def many_boxes(num):
+    return render_template('boxes.html', box=num)
+
+
+@app.route('/play/<int:num>/color')
+def colorful(num):
     return render_template('boxes.html', box=num)
 
 

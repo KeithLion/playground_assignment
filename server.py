@@ -4,13 +4,18 @@ app.secret_key = 'playplace'
 
 
 @app.route('/')
-def starter_boxes():
-    return render_template('boxes.html')
+def play():
+    return redirect('/play')
 
 
 @app.route('/play')
-def one_box():
-    render_template('boxes.html', box=1)
+def starter_boxes():
+    return render_template('boxes.html', box=3)
+
+
+@app.route('/play/<int:num>')
+def one_box(num):
+    return render_template('boxes.html', box=num)
 
 
 if __name__ == "__main__":

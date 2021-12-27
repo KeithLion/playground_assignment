@@ -8,5 +8,10 @@ def starter_boxes():
     return render_template('boxes.html')
 
 
+@app.route('/play')
+def one_box():
+    render_template('boxes.html', box=1)
+
+
 if __name__ == "__main__":
     app.run(debug=True)
